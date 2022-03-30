@@ -28,6 +28,8 @@ class ConverterView: UIView {
     
     weak var delegate: ConverterViewProtocol?
     
+    // MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -59,6 +61,10 @@ class ConverterView: UIView {
         }
     }
     
+    /*setup guestures to tap the label
+     -add guesture on base country label
+     - add guesture on to country label
+     */
     func setupLabelTap() {
         let baseCountryLabelTap = UITapGestureRecognizer(target: self, action: #selector(self.baseCountryLabelTapped(_:)))
         self.baseCountryLabel.isUserInteractionEnabled = true
@@ -77,6 +83,7 @@ class ConverterView: UIView {
         delegate?.openCountryList(range: .to)
     }
     
+    //Update country view
     func updateToCountryView(model:ConverterModel){
         guard let toCountry = model.toCountryDescription else {
             print("failed to extract base country information")
@@ -105,6 +112,8 @@ class ConverterView: UIView {
     }
 }
 
+// MARK: - UITextField Delegates
+
 extension ConverterView : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -113,7 +122,6 @@ extension ConverterView : UITextFieldDelegate {
             let fullString = textFieldString.replacingCharacters(in: swtRange, with: string)
             self.enteredAmount.value = Double(fullString) ?? 0.0
         }
-        
         return true
     }
 }
