@@ -1,0 +1,6 @@
+framework module VACountrySelector {
+  umbrella header "VACountrySelector-umbrella.h"
+
+  export *
+  module * { export * }
+}

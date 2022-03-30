@@ -1,0 +1,36 @@
+PODS:
+  - ANLoader (2.0.0)
+  - SnapshotTesting (1.9.0)
+  - VACountrySelector (0.0.1)
+
+DEPENDENCIES:
+  - ANLoader (from `https://github.com/ANSCoder/ANLoader.git`)
+  - SnapshotTesting (from `https://github.com/pointfreeco/swift-snapshot-testing.git`)
+  - VACountrySelector
+
+SPEC REPOS:
+  https://github.com/vikas837/VACountrySelectorSpec.git:
+    - VACountrySelector
+
+EXTERNAL SOURCES:
+  ANLoader:
+    :git: https://github.com/ANSCoder/ANLoader.git
+  SnapshotTesting:
+    :git: https://github.com/pointfreeco/swift-snapshot-testing.git
+
+CHECKOUT OPTIONS:
+  ANLoader:
+    :commit: b45b12600a4dc693b83d88640e24ca0bb545fa79
+    :git: https://github.com/ANSCoder/ANLoader.git
+  SnapshotTesting:
+    :commit: 88f6e2c0afe04221fcfb1601a2ecaad83115a05f
+    :git: https://github.com/pointfreeco/swift-snapshot-testing.git
+
+SPEC CHECKSUMS:
+  ANLoader: 25f4ed93f5d13678eb72a38c2f674acfcaba8205
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
+  VACountrySelector: 4c5c48ba63b9e66e7d6f266abbcb3e865223aed0
+
+PODFILE CHECKSUM: 28c174563251e13299ae42e74e1283b164396299
+
+COCOAPODS: 1.11.3

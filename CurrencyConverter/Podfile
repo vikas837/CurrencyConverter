@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+source 'https://github.com/vikas837/VACountrySelectorSpec.git'
+
+target 'CurrencyConverter' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CurrencyConverter
+  pod 'ANLoader', :git => 'https://github.com/ANSCoder/ANLoader.git'
+  pod 'VACountrySelector'
+
+
+  target 'CurrencyConverterTests' do
+  pod 'SnapshotTesting', :git => 'https://github.com/pointfreeco/swift-snapshot-testing.git'
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CurrencyConverterUITests' do
+    # Pods for testing
+  end
+
+end

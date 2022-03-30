@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bg8-Vt-zn9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Converter-->
+        <scene sceneID="0ID-eH-4zp">
+            <objects>
+                <viewController storyboardIdentifier="ConverterViewController" id="lc6-oc-Jsl" customClass="ConverterViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8R-qT-HZA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9J4-BI-NTs" customClass="ConverterView" customModule="CurrencyConverter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="386"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9J4-BI-NTs" secondAttribute="height" multiplier="207:193" id="Tqb-pD-Bzx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gtm-Qr-sad"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="9J4-BI-NTs" firstAttribute="leading" secondItem="Gtm-Qr-sad" secondAttribute="leading" id="9xB-wR-RCo"/>
+                            <constraint firstItem="9J4-BI-NTs" firstAttribute="top" secondItem="Gtm-Qr-sad" secondAttribute="top" id="RhC-Nm-HLq"/>
+                            <constraint firstItem="9J4-BI-NTs" firstAttribute="trailing" secondItem="Gtm-Qr-sad" secondAttribute="trailing" id="dSt-cu-gwU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Currency Converter" id="dNL-6M-iHI"/>
+                    <connections>
+                        <outlet property="converterView" destination="9J4-BI-NTs" id="27a-kn-FiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pb0-Mr-w6R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026.0869565217392" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yEJ-6d-jxt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bg8-Vt-zn9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eK9-PL-5CY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lc6-oc-Jsl" kind="relationship" relationship="rootViewController" id="7ga-lU-fgZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFX-cw-Urr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
